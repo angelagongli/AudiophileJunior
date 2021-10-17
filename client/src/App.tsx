@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import { Navigation } from "./components/Navigation";
 import { fromEvent, animationFrameScheduler } from 'rxjs';
 import { map, switchMap, takeUntil, subscribeOn } from 'rxjs/operators';
 import {
@@ -129,6 +130,7 @@ function App() {
           </Switch>
         </div>
       </Router>
+      <Navigation />
     </div>
   );
 }
