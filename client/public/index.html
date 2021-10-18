@@ -25,10 +25,12 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React Redux App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <input type="file">
     <div class="draggableBox"></div>
     <style>
       .draggableBox {
@@ -49,5 +51,26 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      const input = document.querySelector('input');
+      input.addEventListener('change', onChoose);
+      function onChoose(event) {
+        if (event.target.files.length > 0) {
+          var file = event.target.files[0];
+          var reader = new FileReader();
+          reader.addEventListener('load', function() {
+            var data = reader.result;
+            var sound = new Howl({
+              src: 'http://localhost:8080/01 Movement And Location 1.m4a'
+              // src: data,
+              // format: file.name.split('.').pop().toLowerCase()
+            });
+            sound.play();
+            console.log("Now playing!");
+          });
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
   </body>
 </html>
