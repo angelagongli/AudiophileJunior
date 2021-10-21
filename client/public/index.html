@@ -61,9 +61,8 @@
           reader.addEventListener('load', function() {
             var data = reader.result;
             var sound = new Howl({
-              src: 'http://localhost:8080/01 Movement And Location 1.m4a'
-              // src: data,
-              // format: file.name.split('.').pop().toLowerCase()
+              src: data,
+              format: file.name.split('.').pop().toLowerCase()
             });
             sound.play();
             console.log("Now playing!");
