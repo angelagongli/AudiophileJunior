@@ -1,8 +1,6 @@
 # Audiophile Junior
 
-## Ideas for Audiophile Junior
-* Implement Music Memory's "Animated Map":
-  * https://www.musicmemory.com/sample-lesson--animated-map
-  * => https://vimeo.com/506384601
-* Animation with Canvas API
-* Can LayoutParser parse sheet music?
+## Reminder to myself for developing the hopeful future in my spare time in 2022
+1. Help the user/user's child learn how to read music
+1. Help the user/user's child learn music terminology
+1. Help the user/user's child identify/remember different segments of music, like Music Memory
