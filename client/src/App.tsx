@@ -9,7 +9,8 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  Link,
+  useSearchParams
 } from "react-router-dom";
 import HomePage from './pages/Home';
 import LoginPage from './pages/Login';
@@ -146,6 +147,8 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
   return (
     <Router>
       <Routes>
+        {/* Once we need routing I will need to go back to the Nerdy Canuck's
+        Video tutorial on useSearchParams in React Router */}
         <Route
           path="/"
           element={
