@@ -1,0 +1,34 @@
+{
+  "name": "audiophilejunior",
+  "version": "1.0.0",
+  "description": "1. Help the user/user's child learn how to read music\r 1. Help the user/user's child learn music terminology\r 1. Help the user/user's child identify/remember different segments of music, like Music Memory",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.1",
+    "if-env": "^1.0.4",
+    "tedious": "^14.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.1",
+    "nodemon": "^2.0.16"
+  },
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelagongli/AudiophileJunior.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angelagongli/AudiophileJunior/issues"
+  },
+  "homepage": "https://github.com/angelagongli/AudiophileJunior#readme"
+}
