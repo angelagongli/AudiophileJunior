@@ -2,6 +2,7 @@
   "name": "audiophilejunior",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@fluentui/react": "^8.66.2",
     "@reduxjs/toolkit": "^1.8.1",
